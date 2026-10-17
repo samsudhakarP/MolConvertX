@@ -1,0 +1,38 @@
+{
+  "name": "molconvertx-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently -k \"npm:frontend\" \"npm:electron\"",
+    "frontend": "cd ../frontend && npm run dev",
+    "electron": "wait-on http://127.0.0.1:5173 && electron .",
+    "build": "electron-builder --win"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12",
+    "wait-on": "^8.0.3"
+  },
+  "build": {
+    "appId": "com.molconvertx.desktop",
+    "productName": "MolConvertX",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.cjs"
+    ],
+    "extraResources": [
+      {
+        "from": "../backend",
+        "to": "backend"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
