@@ -1,0 +1,122 @@
+
+# ==============================
+# Node.js dependencies
+# ==============================
+node_modules/
+**/node_modules/
+
+# ==============================
+# Build outputs
+# ==============================
+dist/
+build/
+out/
+release/
+**/dist/
+**/build/
+
+# ==============================
+# Vite
+# ==============================
+.vite/
+vite.config.*.timestamp-*
+
+# ==============================
+# Python cache files
+# ==============================
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging
+*.egg
+*.egg-info/
+wheels/
+dist-python/
+
+# ==============================
+# Environment variables / secrets
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# Logs and temporary files
+# ==============================
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+
+# ==============================
+# Electron / Electron Builder
+# ==============================
+electron-builder.env
+*.asar
+*.dmg
+*.exe
+*.msi
+*.app
+*.deb
+*.rpm
+
+# ==============================
+# IDE and editor files
+# ==============================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Python test / coverage
+# ==============================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==============================
+# Molecular conversion outputs
+# Keep source code and small test files
+# ==============================
+output/
+outputs/
+converted/
+conversion_results/
+*.pdbqt
+*.mol2
+*.sdf
+*.mol
+*.pdb
+*.cif
+*.mmcif
+*.xyz
+*.smi
+
+# ==============================
+# Docker
+# ==============================
+.docker/
+
+# ==============================
+# Local databases and generated data
+# ==============================
+*.sqlite
+*.sqlite3
+*.db
+data/generated/
